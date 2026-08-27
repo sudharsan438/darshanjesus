@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Darshan — sacred places, ancient stories, mysterious places and spiritual discoveries.">
+<title>Darshan Daily | Sacred & Mystery</title>
+<link rel="stylesheet" href="sacred-mystery.css">
+<link rel="stylesheet" href="darshan-global-nav.css">
+</head>
+<body>
+<header class="darshan-global-header">
+  <div class="darshan-global-nav-wrap">
+    <a class="darshan-global-brand" href="index.html" aria-label="Darshan home">
+      <span class="darshan-global-mark">DW</span>
+      <span class="darshan-global-name">DARSHAN</span>
+    </a>
+    <button class="darshan-global-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="darshan-global-links" aria-label="Primary navigation">
+      <a href="news.html">Video News</a>
+      <a href="daily-motivation.html">Motivation</a>
+      <a href="sacred-mystery.html">Sacred &amp; Mystery</a>
+      <a href="daily-luck.html">Daily Luck</a>
+      <a href="index.html#books">Books</a>
+      <a href="mindlab.html">Mind Lab</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#community">Community</a>
+      <a class="join" href="index.html#community">Join</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="sm-hero"><div class="sm-container"><p class="eyebrow">DARSHAN DAILY</p><h1>Sacred Places.<br>Mysteries. Stories.</h1><p>Discover remarkable temples, ancient places, spiritual traditions and mysteries from around the world.</p></div></section>
+<section class="filters"><div class="sm-container filter-row" id="filters"><button class="active" data-category="all">All</button><button data-category="temple">🛕 Temples</button><button data-category="mystery">🔮 Mysteries</button><button data-category="ancient">📜 Ancient</button><button data-category="spiritual">🕉 Spiritual</button><button data-category="video">🎥 Videos</button></div></section>
+<section class="sm-section"><div class="sm-container"><div class="section-intro"><div><p class="eyebrow">TODAY’S DISCOVERIES</p><h2>Stories Worth Exploring</h2></div><p>Temples, mysteries, ancient places and spiritual stories.</p></div><div id="loading" class="state">Discovering today's stories…</div><div id="grid" class="story-grid"></div><div id="empty" class="state" hidden>No stories have been published yet.</div><div id="error" class="state error" hidden>We couldn't load the stories. Please try again.</div></div></section>
+</main>
+<div id="story-modal" class="modal" hidden><div class="modal-backdrop" data-close></div><article class="modal-card"><button class="modal-close" data-close aria-label="Close">×</button><div id="modal-media" class="modal-media"></div><p id="modal-category" class="eyebrow"></p><h2 id="modal-title"></h2><p id="modal-story"></p><p id="modal-source" class="source"></p><button id="back-to-sacred" class="back-to-sacred" type="button">← BACK TO SACRED &amp; MYSTERY</button></article></div>
+<footer class="sm-footer"><div class="sm-container">© <span id="year"></span> Darshan Books · Discover. Reflect. Explore.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="sacred-mystery.js"></script>
+<script src="darshan-global-nav.js"></script>
+</body></html>

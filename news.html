@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Darshan Video News — Fresh news videos from India and around the world.">
+    <meta name="theme-color" content="#13233f">
+    <title>Darshan Video News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="darshan-global-nav.css">
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+<header class="darshan-global-header">
+    <div class="darshan-global-nav-wrap">
+        <a class="darshan-global-brand" href="index.html" aria-label="Darshan home">
+            <span class="darshan-global-mark">DW</span>
+            <span class="darshan-global-name">DARSHAN</span>
+        </a>
+        <button class="darshan-global-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="darshan-global-links" aria-label="Primary navigation">
+            <a class="active" href="news.html">Video News</a>
+            <a href="daily-motivation.html">Motivation</a>
+            <a href="sacred-mystery.html">Sacred &amp; Mystery</a>
+            <a href="daily-luck.html">Daily Luck</a>
+            <a href="index.html#books">Books</a>
+            <a href="mindlab.html">Mind Lab</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#community">Community</a>
+            <a class="join" href="index.html#community">Join</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="video-hero">
+        <div class="container hero-inner">
+            <p class="eyebrow">DARSHAN DAILY</p>
+            <h1>Watch the World.<br>Stay Curious.</h1>
+            <p class="hero-text">Fresh news videos from YouTube, selected for a simple and focused Darshan experience.</p>
+            <div class="hero-meta">
+                <span class="live-dot"></span>
+                <span id="freshness-label">Fresh videos from the last 48 hours</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="category-bar" id="category-bar" aria-label="Video news categories">
+                <button class="category-button active" type="button" data-category="india">India</button>
+                <button class="category-button" type="button" data-category="world">World</button>
+                <button class="category-button" type="button" data-category="technology">Technology</button>
+                <button class="category-button" type="button" data-category="business">Business</button>
+                <button class="category-button" type="button" data-category="science">Science</button>
+                <button class="category-button" type="button" data-category="sports">Sports</button>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">VIDEO NEWS</p>
+                    <h2 id="section-title">India</h2>
+                </div>
+                <button id="refresh-button" class="refresh-button" type="button">REFRESH</button>
+            </div>
+
+            <div id="video-loading" class="video-state">
+                <div class="spinner"></div>
+                <p>Finding fresh videos...</p>
+            </div>
+
+            <div id="video-grid" class="video-grid" aria-live="polite"></div>
+
+            <div id="video-error" class="video-error" hidden>
+                <h3>We couldn't load fresh videos.</h3>
+                <p id="video-error-text">Please try again in a moment.</p>
+                <button id="retry-button" class="retry-button" type="button">TRY AGAIN</button>
+            </div>
+
+            <p class="video-note">Videos are hosted and played by YouTube. Darshan does not download or re-host the videos.</p>
+        </div>
+    </section>
+
+    <section class="video-message">
+        <div class="container">
+            <p class="eyebrow">DARSHAN DAILY</p>
+            <h2>See what is happening.<br>Then think for yourself.</h2>
+            <p>News is more meaningful when curiosity comes before reaction.</p>
+            <a class="back-button" href="index.html">BACK TO DARSHAN</a>
+        </div>
+    </section>
+</main>
+
+<footer class="video-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Darshan. All rights reserved.</p>
+        <a href="index.html">Darshan Home</a>
+    </div>
+</footer>
+
+<div id="video-modal" class="video-modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button id="close-modal" class="modal-close" type="button" aria-label="Close video">×</button>
+        <div class="modal-video-wrap">
+            <iframe id="video-frame" title="News video" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <p id="modal-channel" class="modal-channel"></p>
+            <h3 id="modal-title"></h3>
+            <p id="modal-date"></p>
+        </div>
+    </div>
+</div>
+
+<script src="darshan-global-nav.js" defer></script>
+<script src="news.js" defer></script>
+</body>
+</html>

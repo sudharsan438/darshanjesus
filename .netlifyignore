@@ -1,0 +1,9 @@
+node_modules
+.git
+.env
+.env.local
+.DS_Store
+.vscode
+package-lock.json
+yarn.lock
+README.md

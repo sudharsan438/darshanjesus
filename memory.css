@@ -1,0 +1,713 @@
+:root {
+    --cream: #f7f2e8;
+    --cream-dark: #eee5d5;
+    --navy: #10233f;
+    --gold: #b58b45;
+    --text: #263447;
+    --muted: #687384;
+    --white: #ffffff;
+    --border: rgba(16, 35, 63, 0.12);
+
+    --card-front: #10233f;
+    --card-back: #f7f2e8;
+    --card-match: #e7f0e3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.memory-header {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--navy);
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.memory-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.memory-nav a {
+    color: var(--navy);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.memory-nav a:hover,
+.memory-nav a.active {
+    color: var(--gold);
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.memory-hero {
+    background: var(--navy);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 90px 20px 100px;
+}
+
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.memory-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(48px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN GAME
+   ========================= */
+
+.memory-section {
+    padding: 100px 0;
+}
+
+.memory-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 75px;
+}
+
+
+/* =========================
+   GAME INFO
+   ========================= */
+
+.game-info h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(38px, 5vw, 56px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+.game-info > p:not(.eyebrow) {
+    color: var(--muted);
+
+    max-width: 420px;
+
+    font-size: 16px;
+}
+
+
+/* STATUS */
+
+.game-status {
+    margin-top: 35px;
+
+    padding: 18px 20px;
+
+    border-left: 3px solid var(--gold);
+
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.status-label {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
+}
+
+.game-status strong {
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+
+/* STATS */
+
+.game-stats {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 28px;
+}
+
+.game-stats > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.stat-label {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.game-stats strong {
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+
+/* CONTROLS */
+
+.game-controls {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.game-button,
+.back-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border: none;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.game-button:hover,
+.back-button:hover {
+    background: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MEMORY BOARD
+   ========================= */
+
+.memory-board-area {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.memory-board {
+    width: min(560px, 100%);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    padding: 12px;
+
+    background: var(--navy);
+
+    box-shadow:
+        0 20px 45px rgba(16, 35, 63, 0.16);
+}
+
+
+/* =========================
+   MEMORY CARDS
+   ========================= */
+
+.memory-card {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    padding: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    perspective: 900px;
+
+    border-radius: 4px;
+}
+
+.memory-card:disabled {
+    cursor: default;
+}
+
+.card-inner {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform 0.45s ease;
+
+    transform-style: preserve-3d;
+}
+
+.memory-card.flipped .card-inner,
+.memory-card.matched .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    border-radius: 3px;
+}
+
+
+/* HIDDEN SIDE */
+
+.card-front {
+    background: var(--card-front);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: var(--gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(24px, 4vw, 38px);
+}
+
+.card-front::after {
+    content: "D";
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46%;
+
+    height: 46%;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+}
+
+
+/* SYMBOL SIDE */
+
+.card-back {
+    background: var(--card-back);
+
+    border: 1px solid rgba(16, 35, 63, 0.12);
+
+    color: var(--navy);
+
+    font-size: clamp(28px, 5vw, 48px);
+
+    transform: rotateY(180deg);
+}
+
+
+/* MATCHED */
+
+.memory-card.matched .card-back {
+    background: var(--card-match);
+
+    border-color: #6d9361;
+}
+
+
+/* HOVER */
+
+.memory-card:not(.flipped):not(.matched):hover
+.card-front {
+    background: #1b3557;
+}
+
+
+/* =========================
+   COMPLETION
+   ========================= */
+
+.completion-section {
+    padding: 100px 20px;
+
+    background: var(--cream-dark);
+
+    text-align: center;
+}
+
+.completion-section[hidden] {
+    display: none;
+}
+
+.completion-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 35px;
+}
+
+.completion-stats {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-bottom: 25px;
+}
+
+.completion-stats > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.completion-stats span {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.completion-stats strong {
+    color: var(--navy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+}
+
+#result-message {
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.completion-section .back-button {
+    margin-top: 18px;
+
+    background: transparent;
+
+    color: var(--navy);
+
+    border: 1px solid rgba(16, 35, 63, 0.25);
+}
+
+.completion-section .back-button:hover {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+
+/* =========================
+   MESSAGE
+   ========================= */
+
+.memory-message {
+    background: var(--cream);
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.memory-message h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.memory-message p:not(.eyebrow) {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.memory-footer {
+    background: var(--navy);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    padding: 30px 0;
+}
+
+.memory-footer .container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.memory-footer p,
+.memory-footer a {
+    font-size: 13px;
+}
+
+.memory-footer a {
+    color: var(--white);
+
+    text-decoration: none;
+}
+
+.memory-footer a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .memory-layout {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .game-info {
+        text-align: center;
+    }
+
+    .game-info > p:not(.eyebrow) {
+        margin: 0 auto;
+    }
+
+    .game-stats,
+    .game-controls {
+        justify-content: center;
+    }
+
+    .memory-board {
+        width: min(600px, 100%);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+
+        padding: 18px 0;
+    }
+
+    .memory-nav {
+        gap: 16px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .memory-hero {
+        padding: 70px 20px 80px;
+    }
+
+    .memory-section {
+        padding: 70px 0;
+    }
+
+    .memory-board {
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .completion-stats {
+        gap: 35px;
+    }
+
+    .memory-footer .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Darshan Reaction Test — How fast can you react?"
+    >
+
+    <title>Darshan Reaction Test</title>
+
+    <link rel="stylesheet" href="reaction.css">
+
+    <link rel="stylesheet" href="darshan-global-nav.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         DARSHAN GLOBAL NAVIGATION
+         ========================================= -->
+
+    <header class="darshan-global-header">
+
+        <div class="darshan-global-nav-wrap">
+
+            <a
+                class="darshan-global-brand"
+                href="index.html"
+                aria-label="Darshan home"
+            >
+                <span class="darshan-global-mark">
+                    DW
+                </span>
+
+                <span class="darshan-global-name">
+                    DARSHAN
+                </span>
+            </a>
+
+
+            <button
+                class="darshan-global-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav
+                class="darshan-global-links"
+                aria-label="Primary navigation"
+            >
+
+                <a href="news.html">
+                    Daily News
+                </a>
+
+                <a href="daily-motivation.html">
+                    Motivation
+                </a>
+
+                <a href="sacred-mystery.html">
+                    Sacred &amp; Mystery
+                </a>
+
+                <a href="daily-luck.html">
+                    Daily Luck
+                </a>
+
+                <a href="index.html#books">
+                    Books
+                </a>
+
+                <a href="mindlab.html">
+                    Mind Lab
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#community">
+                    Community
+                </a>
+
+                <a
+                    class="join"
+                    href="index.html#community"
+                >
+                    Join
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+             ===================================== -->
+
+        <section class="reaction-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    DARSHAN MIND LAB
+                </p>
+
+                <h1>
+                    How Fast<br>
+                    Can You React?
+                </h1>
+
+                <p class="hero-text">
+                    Wait for the signal.
+                    Then react as quickly as you can.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             GAME
+             ===================================== -->
+
+        <section class="reaction-section">
+
+            <div class="container">
+
+
+                <div class="reaction-intro">
+
+                    <p class="eyebrow">
+                        REACTION TEST
+                    </p>
+
+                    <h2>
+                        Test Your Reflexes
+                    </h2>
+
+                    <p>
+                        Press START and wait carefully.
+                        When the screen changes,
+                        click as quickly as possible.
+                    </p>
+
+                </div>
+
+
+                <!-- ===============================
+                     RESULT
+                     =============================== -->
+
+                <div class="reaction-result">
+
+                    <span class="result-label">
+                        YOUR REACTION
+                    </span>
+
+                    <strong id="reaction-time">
+                        —
+                    </strong>
+
+                    <span class="result-unit">
+                        milliseconds
+                    </span>
+
+                </div>
+
+
+                <!-- ===============================
+                     GAME AREA
+                     =============================== -->
+
+                <div
+                    id="reaction-area"
+                    class="reaction-area waiting"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Reaction test game area"
+                >
+
+                    <div
+                        id="reaction-message"
+                        class="reaction-message"
+                    >
+                        Press START to begin
+                    </div>
+
+                </div>
+
+
+                <!-- ===============================
+                     CONTROLS
+                     =============================== -->
+
+                <div class="reaction-controls">
+
+                    <button
+                        id="start-button"
+                        class="reaction-button primary"
+                        type="button"
+                    >
+                        START
+                    </button>
+
+                    <button
+                        id="reset-button"
+                        class="reaction-button secondary"
+                        type="button"
+                    >
+                        RESET
+                    </button>
+
+                </div>
+
+
+                <!-- ===============================
+                     PERSONAL BEST
+                     =============================== -->
+
+                <div class="reaction-stats">
+
+                    <div class="reaction-stat">
+
+                        <span>
+                            BEST
+                        </span>
+
+                        <strong id="best-time">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="reaction-stat">
+
+                        <span>
+                            ATTEMPTS
+                        </span>
+
+                        <strong id="attempts">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="reaction-stat">
+
+                        <span>
+                            AVERAGE
+                        </span>
+
+                        <strong id="average-time">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CHALLENGE MESSAGE
+             ===================================== -->
+
+        <section class="reaction-message-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    THE CHALLENGE
+                </p>
+
+                <h2>
+                    Can You Beat Yourself?
+                </h2>
+
+                <p>
+                    Your first score is only the beginning.
+                    Try again and see if you can make
+                    your reaction even faster.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BACK TO MIND LAB
+             ===================================== -->
+
+        <section class="reaction-back">
+
+            <div class="container">
+
+                <a
+                    href="mindlab.html"
+                    class="back-button"
+                >
+                    BACK TO MIND LAB
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="reaction-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Darshan. All rights reserved.
+            </p>
+
+            <a href="mindlab.html">
+                Darshan Mind Lab
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="darshan-global-nav.js"></script>
+
+    <script src="reaction.js"></script>
+
+</body>
+</html>

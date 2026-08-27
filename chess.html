@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Darshan Chess — Play, think and challenge your mind."
+    >
+
+    <meta
+        name="theme-color"
+        content="#10233f"
+    >
+
+    <title>Darshan Chess | Mind Lab</title>
+
+
+    <!-- DARSHAN GLOBAL NAV -->
+    <link
+        rel="stylesheet"
+        href="darshan-global-nav.css"
+    >
+
+
+    <!-- CHESS -->
+    <link
+        rel="stylesheet"
+        href="chess-v1.css"
+    >
+
+
+    <!-- CHESS.JS ENGINE -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     DARSHAN GLOBAL HEADER
+     ===================================================== -->
+
+<header class="darshan-global-header">
+
+    <div class="darshan-global-nav-wrap">
+
+        <a
+            class="darshan-global-brand"
+            href="index.html"
+            aria-label="Darshan home"
+        >
+
+            <span class="darshan-global-mark">
+                DW
+            </span>
+
+            <span class="darshan-global-name">
+                DARSHAN
+            </span>
+
+        </a>
+
+
+        <button
+            class="darshan-global-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="darshan-global-links"
+            aria-label="Primary navigation"
+        >
+
+            <a href="news.html">
+                Daily News
+            </a>
+
+            <a href="daily-motivation.html">
+                Motivation
+            </a>
+
+            <a href="sacred-mystery.html">
+                Sacred &amp; Mystery
+            </a>
+
+            <a href="daily-luck.html">
+                Daily Luck
+            </a>
+
+            <a href="index.html#books">
+                Books
+            </a>
+
+            <a href="mindlab.html">
+                Mind Lab
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+            <a
+                class="join"
+                href="index.html#community"
+            >
+                Join
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         HERO
+         ================================================= -->
+
+    <section class="chess-hero">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                DARSHAN MIND LAB
+            </p>
+
+            <h1>
+                Darshan Chess
+            </h1>
+
+            <p class="hero-text">
+                Think ahead. Stay patient. Make your move.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CHESS GAME
+         ================================================= -->
+
+    <section class="chess-section">
+
+        <div class="container chess-layout">
+
+
+            <!-- GAME INFORMATION -->
+
+            <div class="game-info">
+
+                <p class="eyebrow">
+                    THE CLASSIC GAME
+                </p>
+
+                <h2>
+                    Challenge Your Mind
+                </h2>
+
+                <p class="game-description">
+                    Play chess, develop your strategy and discover
+                    what your next move reveals.
+                </p>
+
+
+                <!-- STATUS -->
+
+                <div class="game-status">
+
+                    <span class="status-label">
+                        STATUS
+                    </span>
+
+                    <strong id="game-status">
+                        Your turn
+                    </strong>
+
+                </div>
+
+
+                <!-- LEVEL -->
+
+                <div class="chess-level-card">
+
+                    <span class="level-label">
+                        CHESS LEVEL
+                    </span>
+
+                    <strong id="chess-level">
+                        1
+                    </strong>
+
+                    <span
+                        id="chess-level-name"
+                        class="level-name"
+                    >
+                        EASY
+                    </span>
+
+                </div>
+
+
+                <!-- DIFFICULTY -->
+
+                <div class="difficulty-controls">
+
+                    <button
+                        id="diff-easy"
+                        class="diff-button active"
+                        type="button"
+                    >
+                        EASY
+                    </button>
+
+                    <button
+                        id="diff-medium"
+                        class="diff-button"
+                        type="button"
+                    >
+                        MEDIUM
+                    </button>
+
+                    <button
+                        id="diff-hard"
+                        class="diff-button"
+                        type="button"
+                    >
+                        HARD
+                    </button>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+
+                <div class="game-controls">
+
+                    <button
+                        id="new-game"
+                        class="game-button"
+                        type="button"
+                    >
+                        NEW GAME
+                    </button>
+
+                    <button
+                        id="undo-move"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        UNDO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOARD
+                 ================================================= -->
+
+            <div class="board-area">
+
+                <div
+                    id="chess-board"
+                    class="chess-board"
+                    role="grid"
+                    aria-label="Chess board"
+                >
+                </div>
+
+
+                <div class="board-caption">
+
+                    <span>
+                        WHITE
+                    </span>
+
+                    <span>
+                        VS
+                    </span>
+
+                    <span>
+                        BLACK
+                    </span>
+
+                </div>
+
+
+                <!-- MOVE LEGEND -->
+
+                <div class="move-legend">
+
+                    <span class="legend-item">
+
+                        <span class="legend-dot from"></span>
+
+                        Computer moved from
+
+                    </span>
+
+
+                    <span class="legend-item">
+
+                        <span class="legend-dot to"></span>
+
+                        Computer moved to
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MESSAGE
+         ================================================= -->
+
+    <section class="chess-message">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                DARSHAN MIND LAB
+            </p>
+
+            <h2>
+                Every move begins<br>
+                with a thought.
+            </h2>
+
+            <p>
+                Chess is not only about winning.
+                It is about patience, observation,
+                strategy and understanding what comes next.
+            </p>
+
+            <a
+                href="mindlab.html"
+                class="back-button"
+            >
+                BACK TO MIND LAB
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="chess-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Darshan. All rights reserved.
+        </p>
+
+        <a href="mindlab.html">
+            Darshan Mind Lab
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+     ===================================================== -->
+
+<script
+    src="darshan-global-nav.js"
+    defer
+></script>
+
+<script
+    src="chess.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

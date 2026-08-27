@@ -1,0 +1,21 @@
+{
+  "name": "darshan-books",
+  "version": "1.0.0",
+  "description": "Darshan Books - Thoughtful Books. Meaningful Stories.",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - ready for deployment'",
+    "deploy": "netlify deploy --prod",
+    "deploy:preview": "netlify deploy"
+  },
+  "keywords": [
+    "books",
+    "darshan",
+    "thoughtful",
+    "stories",
+    "landing-page"
+  ],
+  "author": "Darshan Books",
+  "license": "MIT"
+}

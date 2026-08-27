@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Darshan Daily Motivation — a thought, a lesson and a moment of reflection for today.">
+    <meta name="theme-color" content="#13233f">
+    <title>Darshan Daily Motivation</title>
+    <link rel="stylesheet" href="daily-motivation.css">
+<link rel="stylesheet" href="darshan-global-nav.css">
+</head>
+
+<body>
+<header class="darshan-global-header">
+  <div class="darshan-global-nav-wrap">
+    <a class="darshan-global-brand" href="index.html" aria-label="Darshan home">
+      <span class="darshan-global-mark">DW</span>
+      <span class="darshan-global-name">DARSHAN</span>
+    </a>
+    <button class="darshan-global-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="darshan-global-links" aria-label="Primary navigation">
+      <a href="news.html">Video News</a>
+      <a href="daily-motivation.html">Motivation</a>
+      <a href="sacred-mystery.html">Sacred &amp; Mystery</a>
+      <a href="daily-luck.html">Daily Luck</a>
+      <a href="index.html#books">Books</a>
+      <a href="mindlab.html">Mind Lab</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#community">Community</a>
+      <a class="join" href="index.html#community">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <section class="dm-hero">
+        <div class="dm-container">
+            <p class="eyebrow">DARSHAN DAILY</p>
+            <h1>A Thought for Today.</h1>
+            <p class="hero-text">Pause. Reflect. Move forward with intention.</p>
+            <p class="today-date" id="today-date">Loading today's date…</p>
+        </div>
+    </section>
+
+    <section class="dm-section">
+        <div class="dm-container">
+            <div id="loading" class="state-message">Loading today's reflection…</div>
+
+            <article id="today-post" class="today-post" hidden>
+                <p class="eyebrow">TODAY'S MOTIVATION</p>
+                <h2 id="post-title"></h2>
+                <p id="motivation" class="motivation"></p>
+
+                <div class="quote-card" id="quote-card" hidden>
+                    <span class="quote-mark">“</span>
+                    <p id="quote"></p>
+                </div>
+
+                <div class="content-grid">
+                    <section id="history-section" hidden>
+                        <p class="mini-label">ON THIS DAY</p>
+                        <h3>What Happened Today</h3>
+                        <p id="history"></p>
+                    </section>
+
+                    <section id="reflection-section" hidden>
+                        <p class="mini-label">A MOMENT TO REFLECT</p>
+                        <h3>Today's Reflection</h3>
+                        <p id="reflection"></p>
+                    </section>
+                </div>
+            </article>
+
+            <div id="empty" class="state-message" hidden>
+                Today's motivation has not been published yet. Please return soon.
+            </div>
+
+            <div id="error" class="state-message error" hidden>
+                We couldn't load today's reflection. Please try again.
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="dm-footer">
+    <div class="dm-container">
+        <p>© <span id="year"></span> Darshan . Pause. Think. Grow.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="daily-motivation.js"></script>
+<script src="darshan-global-nav.js"></script>
+</body>
+</html>

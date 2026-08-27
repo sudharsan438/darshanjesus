@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#13233f">
+    <title>Darshan Daily — Admin</title>
+    <link rel="stylesheet" href="daily-motivation-admin.css">
+</head>
+<body>
+<main class="admin-shell">
+    <header class="admin-header">
+        <div>
+            <p class="eyebrow">DARSHAN DAILY</p>
+            <h1>Daily Motivation</h1>
+            <p class="sub">Private publishing panel</p>
+        </div>
+        <button id="logout" class="secondary" type="button" hidden>Log out</button>
+    </header>
+
+    <section id="login-panel" class="panel">
+        <h2>Admin Login</h2>
+        <p>Sign in with the Supabase account you created for Darshan Daily.</p>
+
+        <label>Email
+            <input id="email" type="email" autocomplete="username" inputmode="email">
+        </label>
+
+        <label>Password
+            <input id="password" type="password" autocomplete="current-password">
+        </label>
+
+        <button id="login" class="primary" type="button">SIGN IN</button>
+        <p id="login-status" class="status"></p>
+    </section>
+
+    <section id="editor-panel" class="panel" hidden>
+        <div class="editor-top">
+            <div>
+                <h2>Publish a Day</h2>
+                <p id="signed-in-as"></p>
+            </div>
+            <button id="new-post" class="secondary" type="button">NEW</button>
+        </div>
+
+        <form id="post-form">
+            <input id="post-id" type="hidden">
+
+            <label>Date
+                <input id="publish-date" type="date" required>
+            </label>
+
+            <label>Title
+                <input id="title" type="text" maxlength="180" required placeholder="A Thought for Today">
+            </label>
+
+            <label>Daily Motivation
+                <textarea id="motivation" rows="7" required placeholder="Write today's main motivation…"></textarea>
+            </label>
+
+            <label>Today's Quote
+                <textarea id="quote" rows="4" placeholder="A short original quote…"></textarea>
+            </label>
+
+            <label>What Happened Today
+                <textarea id="history" rows="7" placeholder="An important event from this date in history…"></textarea>
+            </label>
+
+            <label>Today's Reflection
+                <textarea id="reflection" rows="6" placeholder="A question or reflection for the reader…"></textarea>
+            </label>
+
+            <label class="switch-row">
+                <input id="published" type="checkbox" checked>
+                <span>Published on the website</span>
+            </label>
+
+            <button class="primary publish-button" type="submit">PUBLISH / SAVE</button>
+            <p id="save-status" class="status"></p>
+        </form>
+
+        <hr>
+
+        <h2>Recent Posts</h2>
+        <div id="posts-list" class="posts-list">
+            Loading…
+        </div>
+    
+<section id="story-admin" class="panel" style="margin-top:20px;">
+  <div class="editor-top"><div><h2>Sacred &amp; Mystery Stories</h2><p>Add temples, mysteries, ancient stories and videos from the same admin panel.</p></div></div>
+  <form id="story-form">
+    <input id="story-id" type="hidden">
+    <label>Date<input id="story-date" type="date" required></label>
+    <label>Category<select id="story-category" required><option value="temple">🛕 Temple</option><option value="mystery">🔮 Mystery Place</option><option value="ancient">📜 Ancient Story</option><option value="spiritual">🕉 Spiritual</option><option value="video">🎥 Featured Video</option></select></label>
+    <label>Title<input id="story-title" maxlength="180" required placeholder="The Temple Where..." /></label>
+    <label>Short Description<textarea id="story-excerpt" rows="3" required placeholder="A short curiosity-building description..."></textarea></label>
+    <label>Story<textarea id="story-story" rows="8" required placeholder="Write the full story..."></textarea></label>
+    <label>Image URL<input id="story-image" type="url" placeholder="https://..." /></label>
+    <label>YouTube Video URL<input id="story-video" type="url" placeholder="https://www.youtube.com/watch?v=..." /></label>
+    <label>Source Name<input id="story-source" maxlength="160" placeholder="Source / creator / publication" /></label>
+    <label>Source URL<input id="story-source-url" type="url" placeholder="https://..." /></label>
+    <label class="switch-row"><input id="story-published" type="checkbox" checked><span>Published on website</span></label>
+    <button class="primary publish-button" type="submit">PUBLISH STORY</button><p id="story-status" class="status"></p>
+  </form>
+  <hr><h2>Recent Stories</h2><div id="stories-list" class="posts-list">Loading…</div>
+</section>
+</section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="daily-motivation-admin.js"></script>
+</body>
+</html>

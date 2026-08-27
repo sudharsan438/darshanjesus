@@ -1,0 +1,18 @@
+/* Darshan shared navigation — used across public pages */
+.darshan-global-header{position:sticky;top:0;z-index:1000;background:rgba(246,241,231,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(19,35,63,.10);font-family:Inter,Arial,sans-serif}
+.darshan-global-header *{box-sizing:border-box}
+.darshan-global-nav-wrap{width:min(1160px,calc(100% - 2rem));min-height:78px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.darshan-global-brand{display:inline-flex;align-items:center;gap:12px;color:#13233f;text-decoration:none;flex-shrink:0}
+.darshan-global-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(184,145,75,.35);border-radius:50%;background:linear-gradient(180deg,rgba(184,145,75,.18),rgba(184,145,75,.04));color:#b8914b;font:700 14px Georgia,serif;letter-spacing:1px}
+.darshan-global-name{font:700 20px Georgia,serif;letter-spacing:3px}
+.darshan-global-links{display:flex;align-items:center;justify-content:flex-end;gap:20px}
+.darshan-global-links a{color:#13233f;text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap;transition:color .18s ease}
+.darshan-global-links a:hover,.darshan-global-links a:focus-visible,.darshan-global-links a.active{color:#b8914b}
+.darshan-global-links .join{padding:9px 17px;border:1px solid rgba(184,145,75,.38);border-radius:999px}
+.darshan-global-toggle{display:none;width:52px;height:52px;padding:0;border:1px solid rgba(19,35,63,.16);border-radius:50%;background:transparent;cursor:pointer}
+.darshan-global-toggle span{display:block;width:22px;height:2px;margin:4px auto;background:#13233f;transition:transform .18s ease,opacity .18s ease}
+.darshan-global-header.menu-open .darshan-global-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.darshan-global-header.menu-open .darshan-global-toggle span:nth-child(2){opacity:0}
+.darshan-global-header.menu-open .darshan-global-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:900px){.darshan-global-nav-wrap{min-height:72px}.darshan-global-toggle{display:block}.darshan-global-links{position:absolute;left:50%;right:1rem;top:calc(100% + 12px);display:flex;flex-direction:column;align-items:stretch;gap:0;padding:20px 22px 22px;background:rgba(255,252,246,.97);border:1px solid rgba(184,145,75,.20);border-radius:28px;box-shadow:0 22px 60px rgba(14,29,50,.16);backdrop-filter:blur(18px);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease}.darshan-global-links a{padding:12px 8px;font-size:18px;font-weight:500}.darshan-global-links .join{text-align:center;margin-top:8px;padding:12px 16px}.darshan-global-header.menu-open .darshan-global-links{opacity:1;visibility:visible;transform:translateY(0)}}
+@media(max-width:520px){.darshan-global-nav-wrap{width:calc(100% - 2rem)}.darshan-global-name{font-size:18px;letter-spacing:2.5px}.darshan-global-links{left:1rem;right:1rem}}

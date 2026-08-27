@@ -1,0 +1,1437 @@
+/* =========================================================
+   DARSHAN CHESS
+   CLEAN V1
+   DESKTOP + MOBILE + NETLIFY
+   ========================================================= */
+
+:root {
+
+    --cream: #f7f2e8;
+    --cream-dark: #eee5d5;
+
+    --navy: #10233f;
+    --navy-light: #1b3557;
+
+    --gold: #b58b45;
+
+    --text: #263447;
+    --muted: #657184;
+
+    --white: #ffffff;
+
+    --board-light: #f0dfbd;
+    --board-dark: #8b6845;
+
+    --green: #54eb51;
+
+    --move-from: rgba(181, 139, 69, 0.72);
+    --move-to: rgba(84, 235, 81, 0.72);
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.6;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    width:
+        min(1120px, 92%);
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.chess-hero {
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    text-align:
+        center;
+
+    padding:
+        80px 20px 90px;
+
+}
+
+
+.eyebrow {
+
+    color:
+        var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        16px;
+
+}
+
+
+.chess-hero h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(44px, 7vw, 78px);
+
+    line-height:
+        1.05;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.hero-text {
+
+    color:
+        rgba(255,255,255,0.82);
+
+    font-size:
+        18px;
+
+}
+
+
+/* =========================================================
+   CHESS SECTION
+   ========================================================= */
+
+.chess-section {
+
+    padding:
+        90px 0;
+
+}
+
+
+.chess-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(420px, 1.2fr);
+
+    align-items:
+        center;
+
+    gap:
+        70px;
+
+}
+
+
+/* =========================================================
+   GAME INFO
+   ========================================================= */
+
+.game-info h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(38px, 5vw, 56px);
+
+    line-height:
+        1.1;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.game-description {
+
+    color:
+        var(--muted);
+
+    max-width:
+        430px;
+
+    font-size:
+        16px;
+
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.game-status {
+
+    margin-top:
+        30px;
+
+    padding:
+        17px 20px;
+
+    border-left:
+        4px solid var(--gold);
+
+    background:
+        rgba(255,255,255,0.68);
+
+}
+
+
+.status-label {
+
+    display:
+        block;
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom:
+        4px;
+
+}
+
+
+.game-status strong {
+
+    color:
+        var(--navy);
+
+    font-size:
+        16px;
+
+}
+
+
+/* =========================================================
+   LEVEL CARD
+   ========================================================= */
+
+.chess-level-card {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        18px;
+
+    padding:
+        15px 18px;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.level-label {
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.chess-level-card strong {
+
+    font-size:
+        25px;
+
+}
+
+
+.level-name {
+
+    margin-left:
+        auto;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        rgba(255,255,255,0.72);
+
+}
+
+
+/* =========================================================
+   DIFFICULTY
+   ========================================================= */
+
+.difficulty-controls {
+
+    display:
+        flex;
+
+    gap:
+        7px;
+
+    margin-top:
+        15px;
+
+}
+
+
+.diff-button {
+
+    flex:
+        1;
+
+    padding:
+        10px 8px;
+
+    border:
+        1px solid
+        rgba(16,35,63,0.22);
+
+    background:
+        transparent;
+
+    color:
+        var(--navy);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.diff-button.active {
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    border-color:
+        var(--navy);
+
+}
+
+
+.diff-button:hover {
+
+    border-color:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   GAME CONTROLS
+   ========================================================= */
+
+.game-controls {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.game-button,
+.secondary-button,
+.back-button {
+
+    border:
+        none;
+
+    padding:
+        13px 22px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.4px;
+
+    text-decoration:
+        none;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.game-button {
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.game-button:hover {
+
+    background:
+        var(--gold);
+
+}
+
+
+.secondary-button {
+
+    background:
+        transparent;
+
+    color:
+        var(--navy);
+
+    border:
+        1px solid
+        rgba(16,35,63,0.25);
+
+}
+
+
+.secondary-button:hover {
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+/* =========================================================
+   BOARD AREA
+   ========================================================= */
+
+.board-area {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+}
+
+
+/* =========================================================
+   CHESS BOARD
+   ========================================================= */
+
+.chess-board {
+
+    width:
+        min(620px, 100%);
+
+    aspect-ratio:
+        1 / 1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(8, 1fr);
+
+    grid-template-rows:
+        repeat(8, 1fr);
+
+    border:
+        10px solid
+        var(--navy);
+
+    background:
+        var(--board-dark);
+
+    box-shadow:
+        0 20px 45px
+        rgba(16,35,63,0.20);
+
+    touch-action:
+        manipulation;
+
+    -webkit-user-select:
+        none;
+
+    user-select:
+        none;
+
+}
+
+
+/* =========================================================
+   SQUARE
+   ========================================================= */
+
+.chess-square {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        0;
+
+    min-height:
+        0;
+
+    cursor:
+        pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+.chess-square.light {
+
+    background:
+        var(--board-light);
+
+}
+
+
+.chess-square.dark {
+
+    background:
+        var(--board-dark);
+
+}
+
+
+/* =========================================================
+   PIECES
+   ========================================================= */
+
+.chess-piece {
+
+    font-family:
+        "Segoe UI Symbol",
+        "Noto Sans Symbols 2",
+        "Arial Unicode MS",
+        sans-serif;
+
+    font-size:
+        clamp(30px, 5.2vw, 58px);
+
+    line-height:
+        1;
+
+    pointer-events:
+        none;
+
+    -webkit-user-select:
+        none;
+
+    user-select:
+        none;
+
+    transition:
+        transform 0.12s ease;
+
+}
+
+
+.chess-square:hover .chess-piece {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =========================================================
+   SELECTED
+   ========================================================= */
+
+.chess-square.selected {
+
+    box-shadow:
+        inset 0 0 0 4px
+        rgba(181,139,69,0.95);
+
+}
+
+
+/* =========================================================
+   POSSIBLE MOVE
+   ========================================================= */
+
+.chess-square.possible-move::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        18%;
+
+    aspect-ratio:
+        1;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(16,35,63,0.48);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   POSSIBLE CAPTURE
+   ========================================================= */
+
+.chess-square.possible-capture {
+
+    box-shadow:
+        inset 0 0 0 5px
+        rgba(181,139,69,0.85);
+
+}
+
+
+/* =========================================================
+   CHECK
+   ========================================================= */
+
+.chess-square.in-check {
+
+    background:
+        rgba(170,45,45,0.78) !important;
+
+}
+
+
+/* =========================================================
+   COMPUTER LAST MOVE
+   ========================================================= */
+
+/*
+   Starting square = GOLD
+*/
+
+.chess-square.last-computer-move {
+
+    background:
+        var(--move-from) !important;
+
+    box-shadow:
+        inset 0 0 0 3px
+        rgba(255,255,255,0.28),
+
+        inset 0 0 18px
+        rgba(181,139,69,0.55);
+
+}
+
+
+/*
+   Destination square = GREEN
+*/
+
+.chess-square.last-computer-move-to {
+
+    background:
+        var(--move-to) !important;
+
+    box-shadow:
+        inset 0 0 0 4px
+        rgba(255,255,255,0.40),
+
+        inset 0 0 22px
+        rgba(46,204,113,0.65);
+
+}
+
+
+/*
+   Make the last-move indicator visible
+   even when a piece sits on the square.
+*/
+
+.chess-square.last-computer-move .chess-piece,
+.chess-square.last-computer-move-to .chess-piece {
+
+    filter:
+        drop-shadow(
+            0 2px 2px
+            rgba(0,0,0,0.35)
+        );
+
+}
+
+
+/* =========================================================
+   BOARD CAPTION
+   ========================================================= */
+
+.board-caption {
+
+    width:
+        min(620px, 100%);
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        12px;
+
+    color:
+        var(--navy);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+/* =========================================================
+   MOVE LEGEND
+   ========================================================= */
+
+.move-legend {
+
+    width:
+        min(620px, 100%);
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        18px;
+
+    margin-top:
+        12px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+
+}
+
+
+.legend-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+}
+
+
+.legend-dot {
+
+    width:
+        12px;
+
+    height:
+        12px;
+
+    border-radius:
+        3px;
+
+}
+
+
+.legend-dot.from {
+
+    background:
+        var(--move-from);
+
+}
+
+
+.legend-dot.to {
+
+    background:
+        var(--move-to);
+
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.chess-message {
+
+    background:
+        var(--cream-dark);
+
+    text-align:
+        center;
+
+    padding:
+        90px 20px;
+
+}
+
+
+.chess-message h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(38px, 5vw, 62px);
+
+    line-height:
+        1.1;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.chess-message p:not(.eyebrow) {
+
+    max-width:
+        600px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--muted);
+
+    font-size:
+        16px;
+
+}
+
+
+.back-button {
+
+    display:
+        inline-block;
+
+    margin-top:
+        30px;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.back-button:hover {
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.chess-footer {
+
+    background:
+        var(--navy);
+
+    color:
+        rgba(255,255,255,0.72);
+
+    padding:
+        28px 0;
+
+}
+
+
+.chess-footer .container {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+}
+
+
+.chess-footer p,
+.chess-footer a {
+
+    font-size:
+        13px;
+
+}
+
+
+.chess-footer a {
+
+    color:
+        var(--white);
+
+    text-decoration:
+        none;
+
+}
+
+
+.chess-footer a:hover {
+
+    color:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .chess-layout {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+
+    }
+
+
+    .game-info {
+
+        text-align:
+            center;
+
+    }
+
+
+    .game-description {
+
+        margin:
+            0 auto;
+
+    }
+
+
+    .game-status {
+
+        max-width:
+            500px;
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+        text-align:
+            left;
+
+    }
+
+
+    .chess-level-card {
+
+        max-width:
+            500px;
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+        text-align:
+            left;
+
+    }
+
+
+    .difficulty-controls {
+
+        max-width:
+            500px;
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+    }
+
+
+    .game-controls {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .chess-hero {
+
+        padding:
+            55px 16px 65px;
+
+    }
+
+
+    .hero-text {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .chess-section {
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .chess-layout {
+
+        gap:
+            40px;
+
+    }
+
+
+    .chess-board {
+
+        width:
+            min(94vw, 500px);
+
+        border-width:
+            6px;
+
+        box-shadow:
+            0 12px 25px
+            rgba(16,35,63,0.20);
+
+    }
+
+
+    .chess-piece {
+
+        font-size:
+            clamp(27px, 9vw, 47px);
+
+    }
+
+
+    .chess-square.selected {
+
+        box-shadow:
+            inset 0 0 0 3px
+            rgba(181,139,69,0.95);
+
+    }
+
+
+    .chess-square.possible-capture {
+
+        box-shadow:
+            inset 0 0 0 3px
+            rgba(181,139,69,0.85);
+
+    }
+
+
+    /*
+       IMPORTANT MOBILE OVERRIDE.
+
+       These use !important so the last computer
+       move cannot be hidden by .light/.dark.
+    */
+
+    .chess-square.last-computer-move {
+
+        background:
+            rgba(181,139,69,0.78) !important;
+
+        box-shadow:
+            inset 0 0 0 3px
+            rgba(255,255,255,0.30),
+
+            inset 0 0 16px
+            rgba(181,139,69,0.60) !important;
+
+    }
+
+
+    .chess-square.last-computer-move-to {
+
+        background:
+            rgba(84,235,81,0.78) !important;
+
+        box-shadow:
+            inset 0 0 0 3px
+            rgba(255,255,255,0.40),
+
+            inset 0 0 18px
+            rgba(46,204,113,0.70) !important;
+
+    }
+
+
+    .board-caption {
+
+        width:
+            min(94vw, 500px);
+
+    }
+
+
+    .move-legend {
+
+        width:
+            min(94vw, 500px);
+
+        font-size:
+            9px;
+
+        gap:
+            12px;
+
+    }
+
+
+    .difficulty-controls {
+
+        gap:
+            5px;
+
+    }
+
+
+    .diff-button {
+
+        padding:
+            9px 5px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .game-controls {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .game-button,
+    .secondary-button {
+
+        padding:
+            12px 18px;
+
+    }
+
+
+    .chess-message {
+
+        padding:
+            65px 18px;
+
+    }
+
+
+    .chess-footer .container {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+
+        width:
+            94%;
+
+    }
+
+
+    .chess-board {
+
+        width:
+            94vw;
+
+        border-width:
+            5px;
+
+    }
+
+
+    .chess-piece {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .chess-level-card {
+
+        padding:
+            13px 14px;
+
+    }
+
+
+    .difficulty-controls {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .diff-button {
+
+        width:
+            100%;
+
+    }
+
+
+    .game-controls {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .game-button,
+    .secondary-button {
+
+        width:
+            100%;
+
+    }
+
+}

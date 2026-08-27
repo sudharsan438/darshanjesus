@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Darshan Daily Luck — Choose a card and discover your symbolic reflection for today."
+    >
+
+    <title>Darshan Daily Luck</title>
+
+    <link rel="stylesheet" href="daily-luck.css">
+<link rel="stylesheet" href="darshan-global-nav.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="darshan-global-header">
+  <div class="darshan-global-nav-wrap">
+    <a class="darshan-global-brand" href="index.html" aria-label="Darshan home">
+      <span class="darshan-global-mark">DW</span>
+      <span class="darshan-global-name">DARSHAN</span>
+    </a>
+    <button class="darshan-global-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="darshan-global-links" aria-label="Primary navigation">
+      <a href="news.html">Video News</a>
+      <a href="daily-motivation.html">Motivation</a>
+      <a href="sacred-mystery.html">Sacred &amp; Mystery</a>
+      <a href="daily-luck.html">Daily Luck</a>
+      <a href="index.html#books">Books</a>
+      <a href="mindlab.html">Mind Lab</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#community">Community</a>
+      <a class="join" href="index.html#community">Join</a>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- HERO -->
+    <section class="luck-hero">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                DARSHAN DAILY LUCK
+            </p>
+
+            <h1>
+                Choose Your Card.
+            </h1>
+
+            <p class="hero-text">
+                Pause for a moment, trust your instinct,
+                and discover today's symbolic reflection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARD EXPERIENCE -->
+    <main>
+
+        <section class="luck-section">
+
+            <div class="container">
+
+                <div class="luck-intro">
+
+                    <p class="eyebrow">
+                        YOUR DAILY MOMENT
+                    </p>
+
+                    <h2>
+                        Three cards.<br>
+                        One choice.
+                    </h2>
+
+                    <p>
+                        Take a breath and choose the card
+                        that naturally draws your attention.
+                        There is no right or wrong choice.
+                    </p>
+
+                </div>
+
+
+                <!-- DRAW AREA -->
+
+                <div class="draw-area">
+
+                    <button
+                        id="draw-button"
+                        class="draw-button"
+                        type="button"
+                    >
+                        DRAW TODAY'S CARDS
+                    </button>
+
+                    <p
+                        id="draw-instruction"
+                        class="draw-instruction"
+                    >
+                        When the cards appear, choose one.
+                    </p>
+
+                </div>
+
+
+                <!-- THREE CARDS -->
+
+                <div
+                    id="card-container"
+                    class="card-container"
+                    aria-label="Daily luck cards"
+                >
+
+                    <!-- Cards will be created by daily-luck.js -->
+
+                </div>
+
+
+                <!-- RESULT -->
+
+                <section
+                    id="luck-result"
+                    class="luck-result"
+                    hidden
+                >
+
+                    <p class="eyebrow">
+                        YOUR CARD OF THE DAY
+                    </p>
+
+                    <div
+                        id="result-symbol"
+                        class="result-symbol"
+                    >
+                    </div>
+
+                    <h2 id="result-title">
+                        Your Daily Reflection
+                    </h2>
+
+                    <p
+                        id="result-message"
+                        class="result-message"
+                    >
+                    </p>
+
+
+                    <div class="luck-details">
+
+                        <div>
+
+                            <span>
+                                TODAY'S ENERGY
+                            </span>
+
+                            <strong id="result-energy">
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LUCK
+                            </span>
+
+                            <strong id="result-luck">
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                FOCUS
+                            </span>
+
+                            <strong id="result-focus">
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="reflection-note">
+                        Your card is a symbolic reflection
+                        for today. Take what inspires you
+                        and leave what doesn't.
+                    </p>
+
+
+                    <button
+                        id="new-day-button"
+                        class="draw-button"
+                        type="button"
+                    >
+                        DRAW AGAIN
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- DAILY MESSAGE -->
+
+        <section class="luck-message">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    DARSHAN DAILY
+                </p>
+
+                <h2>
+                    Sometimes the answer<br>
+                    begins with a pause.
+                </h2>
+
+                <p>
+                    Take a moment. Look inward.
+                    Let today's card become a small
+                    reminder to think, reflect and move
+                    forward with intention.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MIND LAB PROMOTION -->
+
+        <section class="luck-promo">
+
+            <div class="container promo-inner">
+
+                <div>
+
+                    <p class="eyebrow">
+                        CHALLENGE YOUR MIND
+                    </p>
+
+                    <h2>
+                        Ready for something<br>
+                        more challenging?
+                    </h2>
+
+                    <p>
+                        Try Chess, Sudoku, Mind Puzzles
+                        or Memory Challenge in Darshan Mind Lab.
+                    </p>
+
+                </div>
+
+                <a
+                    href="mindlab.html"
+                    class="promo-button"
+                >
+                    ENTER MIND LAB
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="luck-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    DARSHAN
+                </strong>
+
+                <p>
+                    Books. Ideas. Mind Lab.
+                    A place to discover and think.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="news.html">
+                    Daily News
+                </a>
+
+                <a href="daily-luck.html">
+                    Daily Luck
+                </a>
+
+                <a href="mindlab.html">
+                    Mind Lab
+                </a>
+
+                <a href="index.html#books">
+                    Books
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Darshan. All rights reserved.
+            </p>
+
+            <span>
+                A symbolic daily reflection.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="daily-luck.js"></script>
+
+<script src="darshan-global-nav.js"></script>
+</body>
+</html>

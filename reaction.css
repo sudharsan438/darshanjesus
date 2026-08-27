@@ -1,0 +1,679 @@
+/* =========================================
+   DARSHAN REACTION TEST
+   ========================================= */
+
+:root {
+    --cream: #f7f2e8;
+    --cream-dark: #eee5d5;
+    --navy: #10233f;
+    --navy-light: #1b3557;
+    --gold: #b58b45;
+    --text: #263447;
+    --white: #ffffff;
+
+    --ready: #d9e5f2;
+    --wait: #c98b45;
+    --go: #43a047;
+    --danger: #c62828;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--cream);
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+
+.container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.reaction-hero {
+    background: var(--navy);
+    color: var(--white);
+
+    text-align: center;
+
+    padding:
+        85px 20px
+        95px;
+}
+
+
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 17px;
+}
+
+
+.reaction-hero h1 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(48px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    margin-bottom: 22px;
+}
+
+
+.hero-text {
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   GAME SECTION
+   ========================================= */
+
+.reaction-section {
+    padding: 90px 0;
+}
+
+
+.reaction-intro {
+    text-align: center;
+
+    max-width: 680px;
+
+    margin:
+        0 auto 45px;
+}
+
+
+.reaction-intro h2 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: var(--navy);
+
+    font-size:
+        clamp(38px, 5vw, 56px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+
+.reaction-intro p:not(.eyebrow) {
+    color: #657184;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   RESULT
+   ========================================= */
+
+.reaction-result {
+    width: min(360px, 90%);
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border-left:
+        4px solid var(--gold);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.result-label {
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.reaction-result strong {
+    color: var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    margin-top: 4px;
+}
+
+
+.result-unit {
+    color: #657184;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   REACTION AREA
+   ========================================= */
+
+.reaction-area {
+    position: relative;
+
+    width: 100%;
+    max-width: 850px;
+
+    height: 360px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    border:
+        5px solid var(--navy);
+
+    background: var(--ready);
+
+    box-shadow:
+        0 18px 40px
+        rgba(16, 35, 63, 0.16);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    outline: none;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+/* =========================================
+   STATES
+   ========================================= */
+
+.reaction-area.waiting {
+    background: var(--ready);
+}
+
+
+.reaction-area.wait {
+    background: var(--wait);
+
+    cursor: wait;
+}
+
+
+.reaction-area.go {
+    background: var(--go);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 20px 45px
+        rgba(67, 160, 71, 0.35);
+}
+
+
+.reaction-area.too-soon {
+    background: var(--danger);
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.reaction-message {
+    padding: 20px;
+
+    color: var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(28px, 5vw, 50px);
+
+    font-weight: 400;
+
+    text-align: center;
+
+    line-height: 1.1;
+
+    pointer-events: none;
+}
+
+
+.reaction-area.wait .reaction-message,
+.reaction-area.go .reaction-message,
+.reaction-area.too-soon .reaction-message {
+    color: var(--white);
+}
+
+
+/* =========================================
+   CONTROLS
+   ========================================= */
+
+.reaction-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+
+.reaction-button {
+    border: none;
+
+    padding:
+        14px 28px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.reaction-button.primary {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+
+.reaction-button.primary:hover {
+    background: var(--gold);
+}
+
+
+.reaction-button.secondary {
+    background: transparent;
+
+    color: var(--navy);
+
+    border:
+        1px solid
+        rgba(16, 35, 63, 0.25);
+}
+
+
+.reaction-button.secondary:hover {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+
+.reaction-button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   PERSONAL STATS
+   ========================================= */
+
+.reaction-stats {
+    width: min(700px, 100%);
+
+    margin:
+        35px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.reaction-stat {
+    padding: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    text-align: center;
+
+    border-top:
+        2px solid
+        var(--gold);
+}
+
+
+.reaction-stat span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.reaction-stat strong {
+    color: var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+}
+
+
+/* =========================================
+   CHALLENGE MESSAGE
+   ========================================= */
+
+.reaction-message-section {
+    background: var(--cream-dark);
+
+    text-align: center;
+
+    padding:
+        90px 20px;
+}
+
+
+.reaction-message-section h2 {
+    color: var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px, 5vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+
+.reaction-message-section p:not(.eyebrow) {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: #657184;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   BACK
+   ========================================= */
+
+.reaction-back {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: var(--cream);
+}
+
+
+.back-button {
+    display: inline-block;
+
+    padding:
+        13px 24px;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        0.2s ease;
+}
+
+
+.back-button:hover {
+    background: var(--gold);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.reaction-footer {
+    background: var(--navy);
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    padding: 30px 0;
+}
+
+
+.reaction-footer .container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.reaction-footer p,
+.reaction-footer a {
+    font-size: 13px;
+}
+
+
+.reaction-footer a {
+    color: var(--white);
+
+    text-decoration: none;
+}
+
+
+.reaction-footer a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .reaction-area {
+        height: 330px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .reaction-hero {
+        padding:
+            65px 20px
+            75px;
+    }
+
+
+    .reaction-section {
+        padding:
+            65px 0;
+    }
+
+
+    .reaction-area {
+        height: 300px;
+
+        border-width: 4px;
+
+        border-radius: 16px;
+    }
+
+
+    .reaction-message {
+        font-size: 30px;
+    }
+
+
+    .reaction-stats {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .reaction-stat {
+        padding: 15px;
+    }
+
+
+    .reaction-controls {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .reaction-button {
+        width: min(280px, 90%);
+    }
+
+
+    .reaction-footer .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .reaction-area {
+        height: 270px;
+    }
+
+
+    .reaction-message {
+        font-size: 26px;
+    }
+
+
+    .reaction-result strong {
+        font-size: 44px;
+    }
+
+}

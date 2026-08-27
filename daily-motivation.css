@@ -1,0 +1,201 @@
+:root {
+    --cream: #f7f2e8;
+    --cream-dark: #eee5d5;
+    --navy: #10233f;
+    --gold: #b58b45;
+    --text: #263447;
+    --muted: #687384;
+    --white: #ffffff;
+    --border: rgba(16, 35, 63, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a { color: inherit; }
+.dm-container { width: min(1120px, 90%); margin: 0 auto; }
+
+.dm-header {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+}
+
+.dm-nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+nav a { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 600; }
+nav a:hover, nav a.active { color: var(--gold); }
+
+.dm-hero {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 86px 20px 92px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.dm-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(46px, 7vw, 76px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: rgba(255,255,255,.82);
+    font-size: 18px;
+}
+
+.today-date {
+    margin-top: 18px;
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dm-section { padding: 88px 0 110px; }
+
+.today-post {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.today-post > h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--navy);
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.12;
+    margin-bottom: 26px;
+}
+
+.motivation {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(21px, 3vw, 28px);
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.quote-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    padding: 34px 38px;
+    margin: 0 0 50px;
+    box-shadow: 0 14px 40px rgba(16,35,63,.06);
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 54px;
+    line-height: .5;
+}
+
+.quote-card p {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.55;
+    margin-top: 12px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.content-grid section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 30px;
+}
+
+.mini-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.content-grid h3 {
+    font-family: Georgia, serif;
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.state-message {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--muted);
+}
+
+.error { color: #8b3d3d; }
+
+.dm-footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 760px) {
+    .dm-nav { align-items: flex-start; padding: 18px 0; }
+    nav { gap: 12px 16px; }
+    .content-grid { grid-template-columns: 1fr; }
+    .quote-card { padding: 28px 24px; }
+    .quote-card p { font-size: 21px; }
+}
