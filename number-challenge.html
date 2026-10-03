@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Darshan Mind Lab — Number Challenge. Train your mind with number sequences, missing numbers and quick calculations."
+    >
+
+    <title>Number Challenge | Darshan Mind Lab</title>
+
+    <link rel="stylesheet" href="number-challenge.css">
+    <link rel="stylesheet" href="darshan-global-nav.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         GLOBAL NAVIGATION
+    ========================== -->
+
+    <header class="darshan-global-header">
+
+        <div class="darshan-global-nav-wrap">
+
+            <a
+                class="darshan-global-brand"
+                href="index.html"
+                aria-label="Darshan home"
+            >
+                <span class="darshan-global-mark">DW</span>
+                <span class="darshan-global-name">DARSHAN</span>
+            </a>
+
+            <button
+                class="darshan-global-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="darshan-global-links"
+                aria-label="Primary navigation"
+            >
+                <a href="news.html">Video News</a>
+                <a href="daily-motivation.html">Motivation</a>
+                <a href="sacred-mystery.html">Sacred &amp; Mystery</a>
+                <a href="daily-luck.html">Daily Luck</a>
+                <a href="index.html#books">Books</a>
+                <a href="mindlab.html">Mind Lab</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#community">Community</a>
+                <a class="join" href="index.html#community">Join</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="number-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">DARSHAN MIND LAB</p>
+
+                <h1>
+                    Number<br>
+                    Challenge
+                </h1>
+
+                <p class="hero-text">
+                    Train your mind. Challenge your thinking.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- GAME INTRO -->
+
+        <section class="number-intro">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">TEST YOUR MIND</p>
+
+                    <h2>Choose Your Challenge</h2>
+
+                    <p>
+                        Think quickly. Find the pattern.
+                        Solve the numbers. Build your streak.
+                    </p>
+
+                </div>
+
+
+                <!-- CHALLENGE MODES -->
+
+                <div class="challenge-modes">
+
+                    <button
+                        class="challenge-mode"
+                        type="button"
+                        data-mode="sequence"
+                    >
+
+                        <span class="mode-icon">01</span>
+
+                        <span class="mode-content">
+                            <strong>Number Sequence</strong>
+                            <small>
+                                Find the number that comes next.
+                            </small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="challenge-mode"
+                        type="button"
+                        data-mode="missing"
+                    >
+
+                        <span class="mode-icon">02</span>
+
+                        <span class="mode-content">
+                            <strong>Missing Number</strong>
+                            <small>
+                                Discover the number hidden in the pattern.
+                            </small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="challenge-mode"
+                        type="button"
+                        data-mode="calculation"
+                    >
+
+                        <span class="mode-icon">03</span>
+
+                        <span class="mode-content">
+                            <strong>Quick Calculation</strong>
+                            <small>
+                                Solve the calculation before time runs out.
+                            </small>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- DIFFICULTY -->
+
+                <div class="difficulty-section">
+
+                    <p class="eyebrow">CHOOSE DIFFICULTY</p>
+
+                    <div class="difficulty-buttons">
+
+                        <button
+                            class="difficulty-button"
+                            type="button"
+                            data-difficulty="easy"
+                        >
+                            EASY
+                        </button>
+
+                        <button
+                            class="difficulty-button"
+                            type="button"
+                            data-difficulty="medium"
+                        >
+                            MEDIUM
+                        </button>
+
+                        <button
+                            class="difficulty-button"
+                            type="button"
+                            data-difficulty="hard"
+                        >
+                            HARD
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GAME PANEL -->
+
+                <section
+                    class="number-game"
+                    aria-label="Number Challenge game"
+                >
+
+                    <!-- GAME HEADER -->
+
+                    <div class="game-header">
+
+                        <div class="game-stat">
+                            <span>Score</span>
+                            <strong id="score">0</strong>
+                        </div>
+
+                        <div class="game-stat">
+                            <span>Streak</span>
+                            <strong id="streak">0</strong>
+                        </div>
+
+                        <div class="game-stat">
+                            <span>Time</span>
+                            <strong id="timer">--</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION -->
+
+                    <div class="question-area">
+
+                        <p
+                            class="question-label"
+                            id="question-label"
+                        >
+                            Choose a challenge to begin
+                        </p>
+
+                        <div
+                            class="question"
+                            id="question"
+                        >
+                            Ready?
+                        </div>
+
+                        <p
+                            class="question-hint"
+                            id="question-hint"
+                        >
+                            Select a challenge mode and difficulty.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ANSWERS -->
+
+                    <div
+                        class="answer-grid"
+                        id="answer-grid"
+                    >
+
+                        <button
+                            class="answer-button"
+                            type="button"
+                            disabled
+                        >
+                            —
+                        </button>
+
+                        <button
+                            class="answer-button"
+                            type="button"
+                            disabled
+                        >
+                            —
+                        </button>
+
+                        <button
+                            class="answer-button"
+                            type="button"
+                            disabled
+                        >
+                            —
+                        </button>
+
+                        <button
+                            class="answer-button"
+                            type="button"
+                            disabled
+                        >
+                            —
+                        </button>
+
+                    </div>
+
+
+                    <!-- GAME MESSAGE -->
+
+                    <div
+                        class="game-message"
+                        id="game-message"
+                        aria-live="polite"
+                    >
+                        Select your challenge to begin.
+                    </div>
+
+
+                    <!-- GAME CONTROLS -->
+
+                    <div class="game-controls">
+
+                        <button
+                            id="start-button"
+                            class="primary-game-button"
+                            type="button"
+                        >
+                            START CHALLENGE
+                        </button>
+
+                        <button
+                            id="next-button"
+                            class="secondary-game-button"
+                            type="button"
+                            disabled
+                        >
+                            NEXT
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUOTE -->
+
+        <section class="number-quote">
+
+            <div class="container">
+
+                <p>
+                    “Every number is a question.
+                    Every answer is a test of your thinking.”
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK TO MIND LAB -->
+
+        <section class="back-to-lab">
+
+            <div class="container">
+
+                <p class="eyebrow">DARSHAN MIND LAB</p>
+
+                <h2>Ready for another challenge?</h2>
+
+                <p>
+                    Explore more games designed to challenge
+                    your strategy, logic, memory and creativity.
+                </p>
+
+                <a
+                    href="mindlab.html"
+                    class="lab-button"
+                >
+                    BACK TO MIND LAB
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="number-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Darshan. All rights reserved.
+            </p>
+
+            <a href="index.html">
+                Back to Darshan Books
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <script src="darshan-global-nav.js"></script>
+    <script src="number-challenge.js"></script>
+
+</body>
+</html>
